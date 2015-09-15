@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "minimum_chrome_version": "44.0",
+ 
+  "name": "さよならスパム (^_^)/~",
+  "description": "はてなスペースのスパムを削除する",
+  "version": "0.0.1",
+
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "http://space.hatena.ne.jp/~/*"
+  ],
+
+  "background": {
+    "scripts": [
+      "js/context_menu.js"
+     ]
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://space.hatena.ne.jp/*"
+      ],
+      "js": [
+        "js/content_script.js"
+      ]
+    }
+  ]
+}
