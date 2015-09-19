@@ -37,7 +37,7 @@ function deleteEntry(el, id) {
     });
 }
 
-function post(url, data, ok, fail) {
+function post(url, data) {
   return new Promise(function(resolve, reject) {
     const xhr = new XMLHttpRequest();
 
@@ -62,7 +62,7 @@ function encode(s) {
 }
 
 function querystring(data) {
-  var items = [];
+  const items = [];
   for (let key in data) {
     items.push(encode(key) + "=" + encode(data[key]));
   }
